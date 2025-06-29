@@ -1,0 +1,21 @@
+# Ignore Python virtual environment
+env/
+
+# Ignore Python cache directories
+__pycache__/
+*.pyc
+
+# Ignore Git related files
+.git/
+.gitignore
+
+# Ignore Docker related files (if any)
+Dockerfile
+compose.yml
+.dockerignore
+
+# Ignore local development files
+.vscode/
+.env
+*.log
+*.sqlite3

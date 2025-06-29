@@ -1,0 +1,23 @@
+# Python
+*.pyc
+__pycache__/
+.Python
+build/
+develop-eggs/
+dist/
+*.egg-info/
+.installed.cfg
+
+# Virtual environment
+env/
+venv/
+.venv/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Data files
+data/
+# Environment variables
+.env

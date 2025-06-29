@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data
+    networks:
+      - app-network
+  ollama:
+    build: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ./ollama/models:/models
+    networks:
+      - app-network
+
+    entrypoint: ['/usr/bin/bash','/pull.sh']
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  ollama-models:
+    driver: local
