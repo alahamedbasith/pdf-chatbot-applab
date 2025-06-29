@@ -67,6 +67,7 @@ This project is a PDF Chatbot developed as part of an assessment for Applab Qata
 
 4.  **Ensure Ollama is installed:**
     Make sure [Ollama](https://ollama.ai/) is installed on your machine and running.
+    
 
 5.  **Run Ollama and pull required models:**
     Pull the required models using the following commands:
@@ -75,12 +76,23 @@ This project is a PDF Chatbot developed as part of an assessment for Applab Qata
     ollama pull nomic-embed-text:v1.5
     ```
 
-6.  **Run the FastAPI application:**
+6.  **Update Ollama base URL in configuration:**
+
+    Open `app/config.py` and update the `OLLAMA_BASE_URL` setting to point to your local Ollama service:
+
+    ```python
+    OLLAMA_BASE_URL = "http://localhost:11434"
+    ```
+
+    This ensures the application connects to your locally running Ollama instance.
+    
+
+7.  **Run the FastAPI application:**
     ```bash
     uvicorn app.main:app --reload
     ```
 
-7.  Open your browser and navigate to `http://localhost:8000`.
+8.  Open your browser and navigate to `http://localhost:8000`.
 
 ## Setup and Run with Docker
 
